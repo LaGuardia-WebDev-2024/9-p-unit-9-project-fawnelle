@@ -15,11 +15,18 @@ var bangryImage = loadImage("7EEA07FA-D910-4B44-8574-F86BBA17B9A9.jpeg");
 
 var parkImage = loadImage("501324C6-EFC0-4672-8F10-3069BE57E041.jpeg");
 
+var shape=0;
+
 //Variable Declarations
 var sceneImage = startImage;
 var sceneText = "where do you want to take her? ૮₍ ´ ꒳ `₎ა🥕 [Press b for bakery and c for clothing store]";
 
 draw = function(){
+
+      if(mousePressed && shape==0){
+         textSize(random(30));
+         text("🤚", 20, 20);
+      }
     
    drawScene();
 
@@ -56,6 +63,7 @@ draw = function(){
    if(key == 'r'){
       sceneImage = startImage;
       sceneText = "where do you want to take her?  [Press b for bakery and c for clothing store]";
+   
    }
    }
 };
